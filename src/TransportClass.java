@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 
 public class TransportClass {
 
@@ -7,6 +6,9 @@ public class TransportClass {
     private String firstname;
     private String lastname;
     private String address;
+
+    private String idJourney;
+    private String desc;
     private int nbrOfPlace;
     private Date startTime;
     private Date endTime;
@@ -36,6 +38,21 @@ public class TransportClass {
                 listDrivers.add(i, arg1);
                 listDrivers.remove(i);
             }
+    }
+
+    public void printMetrics(TransportClass transportClass) {
+        ArrayList<TransportClass> listDrivers = transportClass.getListDrivers();
+        HashMap<String, String> arg1 = new HashMap<>();
+        for (int i = 0; i < listDrivers.size(); i++) {
+            arg1.put(listDrivers.get(i).firstname, listDrivers.get(i).desc);
+        }
+
+        System.out.println("************* Driver Metrics ******************");
+        for (Map.Entry<String, String> map : arg1.entrySet()) {
+            System.out.println("****** " + map.getValue() + " <=============> " + map.getKey() + " *******");
+        }
+        System.out.println("***********************************************");
+
     }
 
     public TransportClass findDriver(int id) {
@@ -152,5 +169,25 @@ public class TransportClass {
 
     public void setListJourneys(ArrayList<TransportClass> listJourneys) {
         this.listJourneys = listJourneys;
+    }
+
+    public String getIdJourney() {
+        return idJourney;
+    }
+
+    public void setIdJourney(String idJourney) {
+        this.idJourney = idJourney;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
