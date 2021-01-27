@@ -15,7 +15,7 @@ public class TransportClass {
         return listJourneys;
     }
 
-    public void createJourney(TransportClass ar-g1) {
+    public void createJourney(TransportClass arg1) {
         listJourneys.add(arg1);
     }
 
