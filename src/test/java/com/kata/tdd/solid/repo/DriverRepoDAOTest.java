@@ -38,7 +38,7 @@ class DriverRepoDAOTest {
 
     @Test
     void should_disconnect_from_oracle() {
-        driverRepoDAO = new DriverRepoDAOMySqlImpl();
+        driverRepoDAO = new DriverRepoDaoOracleImpl();
         String oracleDisconnection = driverRepoDAO.disconnect();
         Assertions.assertEquals("Oracle disconnection", oracleDisconnection);
     }
