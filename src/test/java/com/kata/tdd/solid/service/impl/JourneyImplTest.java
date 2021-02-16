@@ -35,11 +35,11 @@ public class JourneyImplTest {
         journeyToCreate.setDesc("desc");
         journeyService.createJourney(journeyToCreate);
 
-        Journey journeyToBeµUpdated = new Journey();
+        Journey journeyToBeUpdated = new Journey();
 
-        journeyToBeµUpdated.setIdJourney("1");
-        journeyToBeµUpdated.setDesc("desc1");
-        Journey journey = journeyService.updateJourney(journeyToBeµUpdated);
+        journeyToBeUpdated.setIdJourney("1");
+        journeyToBeUpdated.setDesc("desc1");
+        Journey journey = journeyService.updateJourney(journeyToBeUpdated);
 
         Assertions.assertEquals("desc1", journey.getDesc());
     }

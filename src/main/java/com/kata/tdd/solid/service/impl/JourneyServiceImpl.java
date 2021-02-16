@@ -44,7 +44,7 @@ public class JourneyServiceImpl {
 
     //Example
     public List<Journey> JourneyByGenericFind() {
-        GenericFind stringGenericFind = new FindDriverByDesc();
+        GenericFind stringGenericFind = new FindDriverByFirstName();
         return journeys.stream()
                 .filter(journey -> stringGenericFind.find(journey.getDesc()))
                 .collect(Collectors.toList());

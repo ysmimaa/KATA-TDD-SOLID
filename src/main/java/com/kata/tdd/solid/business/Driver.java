@@ -6,6 +6,14 @@ public class Driver {
     private String lastname;
     private String address;
 
+    public Driver(){}
+
+    public Driver(long id, String firstname, String lastname, String address) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+    }
 
     public long getId() {
         return id;
